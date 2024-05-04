@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerasz Gömb</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+    body {
+        text-align: center;
+        background-image: url("bg.png");
+        background-size: 150%;
+    }
+</style>
+<script>
+    console.log("--------------------------------")
+    console.log("LEVEL 1")
+    function setWidth() {
+        var g = document.getElementById("g");
+        g.style.width = "40%";
+    }
+    function zoom() {
+        document.getElementById("au").play();
+        document.getElementsByTagName("html")[0].style.pointerEvents = "none";
+        var xerxes = document.getElementsByTagName("body")[0];
+        var pos = 150;
+        var timer = setInterval(frame, 10);
+        function frame() {
+            console.log(pos)
+            if (pos < -32) {
+                clearInterval(timer);
+                console.log("--------------------------------")
+                console.log("Tedd ezt a link mögé:")
+                console.log("/uxtX9KeOB6")
+            }
+            xerxes.style.backgroundSize = pos.toString() + "%";
+            pos = pos - 0.2;
+        }
+
+    }
+</script>
+<audio id="au">
+    <source src="terasz.mp3" type="audio/mpeg">
+</audio>
+
+<body onload="setWidth();" onclick="zoom();">
+    <img id="g" src="gerasz.gif" title="ctrl+shift+i -> console" alt="Dallamot írok egyedül otthon">
+</body>
+</html>
