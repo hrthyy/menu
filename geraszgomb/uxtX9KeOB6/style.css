@@ -1,0 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: black;
+}
+
+div#page {
+    padding: 4%;
+}
+
+#page p {
+    color: gray;
+}
+
+h1 {
+    color: white;
+}
+
+img#sphere {
+    float: right;
+    width: 25%;
+    padding: 2%;
+}
