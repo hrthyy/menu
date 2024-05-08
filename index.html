@@ -3,28 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="menusrc/menu.css">
+    <link rel="stylesheet" media="only screen and (hover: hover) and (pointer: fine)" href="menusrc/menu_desktop.css">
+    <link rel="stylesheet" media="only screen and (hover: none) and (pointer: coarse)" href="menusrc/menu_mobile.css">
     <script src="menusrc/menu.js"></script>
     <title>hrthyy repo menu</title>
 </head>
-<body>
+<body onload="filterFor(navigator.userAgentData.mobile);">
+    <!-- <div id="using"></div> -->
+
     <div id="page">
-        <div id="message" style="display: none;" onclick="this.setAttribute('style','display: none;')">
-            <p>Nem létező tartalom</p>
-            <button>Bezárás</button>
-        </div>
+        <div id="message" style="display: none"></div> <!--  MSG  -->
 
         <p id="p-title">hrthyy repo menu</p>
 
-        <a class="app" title="Gerasz ARG" href="https://hrthyy.github.io/gerasz"><img class="app-icon" src="menusrc/icons/app-gerasz_arg.png"></a>
-        <a class="app" title="Enhá cigije" href="https://hrthyy.github.io/project-kusfuma24"><img class="app-icon" src="menusrc/icons/app-enha_cigije.png"></a>
-        <a class="app" title="" onclick="nullApp();"><img class="app-icon" src="menusrc/icons/app-null.png"></a>
-        <a class="app" title="" onclick="nullApp();"><img class="app-icon" src="menusrc/icons/app-null.png"></a>
-        <br>
-        <a class="app" title="" onclick="nullApp();"><img class="app-icon" src="menusrc/icons/app-null.png"></a>
-        <a class="app" title="" onclick="nullApp();"><img class="app-icon" src="menusrc/icons/app-null.png"></a>
-        <a class="app" title="" onclick="nullApp();"><img class="app-icon" src="menusrc/icons/app-null.png"></a>
-        <a class="app" title="" onclick="nullApp();"><img class="app-icon" src="menusrc/icons/app-null.png"></a>
+        <a data-device="desktop" class="app" title="Gerasz ARG" href="https://hrthyy.github.io/gerasz" data-href="https://hrthyy.github.io/gerasz">
+            <img class="app-icon" src="menusrc/icons/app-gerasz_arg.png">
+            <p class="titleMobile">Gerasz ARG</p>
+        </a>
+        
+        <a data-device="all" class="app" title="Enhá cigije" href="https://hrthyy.github.io/project-kusfuma24" data-href="https://hrthyy.github.io/project-kusfuma24">
+            <img class="app-icon" src="menusrc/icons/app-enha_cigije.png">
+            <p class="titleMobile">Enhá cigije</p>
+        </a>
+
+        <!-- 
+        <a data-device="all/desktop/mobile" class="app" title="[TITLE]" data-href="[HREF]"
+            <img class="app-icon" src="">
+            <p class="titleMobile">[TITLE]</p>
+        </a>
+        -->
+
+        <a class="app" title="" onclick="nullApp();">
+            <img class="app-icon" src="menusrc/icons/app-null.png">
+            <p class="titleMobile"></p>
+        </a>
+
+        <a class="app" title="" onclick="nullApp();">
+            <img class="app-icon" src="menusrc/icons/app-null.png">
+            <p class="titleMobile"></p>
+        </a>
+
+        <br class="line-break">
+
+        <a class="app" title="" onclick="nullApp();">
+            <img class="app-icon" src="menusrc/icons/app-null.png">
+            <p class="titleMobile"></p>
+        </a>
+
+        <a class="app" title="" onclick="nullApp();">
+            <img class="app-icon" src="menusrc/icons/app-null.png">
+            <p class="titleMobile"></p>
+        </a>
+
+        <a class="app" title="" onclick="nullApp();">
+            <img class="app-icon" src="menusrc/icons/app-null.png">
+            <p class="titleMobile"></p>
+        </a>
+
+        <a class="app" title="" onclick="nullApp();">
+            <img class="app-icon" src="menusrc/icons/app-null.png">
+            <p class="titleMobile"></p>
+        </a>
     </div>
 </body>
 </html>
